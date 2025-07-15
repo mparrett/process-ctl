@@ -3,7 +3,8 @@
 # Run shellcheck on the main script
 lint:
     @if command -v shellcheck >/dev/null 2>&1; then \
-        shellcheck process-ctl; \
+        echo "🔍 Running shellcheck on process-ctl..."; \
+        shellcheck process-ctl && echo "✅ No shellcheck issues found"; \
     else \
         echo "⚠️  shellcheck not installed. Install with: brew install shellcheck"; \
         echo "   Script appears syntactically valid (bash -n check)"; \
