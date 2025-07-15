@@ -4,6 +4,7 @@
 
 <div align="center">
 
+![GitHub stars](https://img.shields.io/github/stars/mparrett/process-ctl?style=social)
 ![Shell](https://img.shields.io/badge/shell-bash-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)
