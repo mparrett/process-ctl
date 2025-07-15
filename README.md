@@ -1,6 +1,10 @@
 # process-ctl
 
-<img src="process-ctl.png" alt="process-ctl logo" width="200">
+<img src="logo.png" alt="process-ctl logo" width="200">
+
+![Shell](https://img.shields.io/badge/shell-bash-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)
 
 A single-script solution for unified process management across development teams. Pure bash, zero dependencies.
 

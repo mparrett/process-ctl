@@ -1,0 +1,16 @@
+# Development workspace
+workspace/
+
+# Process control runtime files  
+.cache/process-ctl/
+
+# macOS
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*~

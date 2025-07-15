@@ -6,7 +6,18 @@
       "Bash(cp:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git push:*)",
+      "Bash(mkdir:*)",
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(pngquant:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(git checkout:*)",
+      "Bash(sips:*)",
+      "Bash(just lint)"
     ],
     "deny": []
   }
