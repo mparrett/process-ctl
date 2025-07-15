@@ -1,0 +1,4 @@
+PROJECT_NAME="example-service"
+START_CMD="python -m http.server 8000"
+PORT=8000
+LOG_MAX_SIZE="50M"
