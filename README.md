@@ -20,6 +20,7 @@ process-ctl start-bg   # background daemon
 process-ctl status     # check status
 process-ctl stop       # stop daemon
 process-ctl logs       # view logs
+process-ctl tail       # follow logs
 ```
 
 ## Features
