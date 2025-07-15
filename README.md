@@ -1,5 +1,7 @@
 # process-ctl
 
+<img src="process-ctl.png" alt="process-ctl logo" width="200">
+
 A single-script solution for unified process management across development teams. Pure bash, zero dependencies.
 
 *Inspired by tools like [procdog](https://github.com/jlevy/procdog) that prioritize simplicity over enterprise complexity.*
