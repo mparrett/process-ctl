@@ -69,6 +69,7 @@ load_config() {
     log_message "Loading configuration from: $config_file"
     
     # Source the configuration file
+    # shellcheck source=/dev/null
     source "$config_file"
     
     # Validate required fields
