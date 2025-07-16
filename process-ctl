@@ -19,7 +19,8 @@ Commands:
     restart    Restart service
     status     Show service status
     logs       Show service logs
-    tail       Tail service logs
+    tail       Show last 50 lines of logs
+    follow     Follow logs in real-time
     help       Show this help message
 
 Configuration:
@@ -253,6 +254,18 @@ tail_logs() {
     log_file=$(get_log_file)
     
     if [[ -f "$log_file" ]]; then
+        tail -n 50 "$log_file"
+    else
+        log_message "No log file found: $log_file"
+        exit 1
+    fi
+}
+
+follow_logs() {
+    local log_file
+    log_file=$(get_log_file)
+    
+    if [[ -f "$log_file" ]]; then
         tail -f "$log_file"
     else
         log_message "No log file found: $log_file"
@@ -291,6 +304,10 @@ main() {
         tail)
             load_config
             tail_logs
+            ;;
+        follow)
+            load_config
+            follow_logs
             ;;
         help|--help|-h)
             show_usage

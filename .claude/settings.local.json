@@ -17,7 +17,12 @@
       "Bash(rm:*)",
       "Bash(git checkout:*)",
       "Bash(sips:*)",
-      "Bash(just lint)"
+      "Bash(just lint)",
+      "Bash(git reset:*)",
+      "Bash(brew install:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run:*)",
+      "Bash(git branch:*)"
     ],
     "deny": []
   }

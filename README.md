@@ -67,7 +67,8 @@ LOG_MAX_SIZE="50M"  # Log rotation threshold
 - `restart` - Restart service
 - `status` - Show service status
 - `logs` - Show service logs
-- `tail` - Tail service logs
+- `tail` - Show last 50 lines of logs
+- `follow` - Follow logs in real-time
 
 Files stored in `~/.cache/process-ctl/`
 
