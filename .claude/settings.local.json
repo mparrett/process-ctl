@@ -22,7 +22,9 @@
       "Bash(brew install:*)",
       "Bash(gh run list:*)",
       "Bash(gh run:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(./process-ctl tail:*)",
+      "Bash(git rebase:*)"
     ],
     "deny": []
   }

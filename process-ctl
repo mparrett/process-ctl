@@ -19,7 +19,7 @@ Commands:
     restart    Restart service
     status     Show service status
     logs       Show service logs
-    tail       Show last 50 lines of logs
+    tail       Show last 50 lines of logs (use -n N for different count)
     follow     Follow logs in real-time
     help       Show this help message
 
@@ -250,11 +250,17 @@ show_logs() {
 }
 
 tail_logs() {
-    local log_file
+    local log_file lines=50
     log_file=$(get_log_file)
     
+    # Parse optional -n argument
+    if [[ "${1:-}" == "-n" && -n "${2:-}" ]]; then
+        lines="$2"
+        shift 2
+    fi
+    
     if [[ -f "$log_file" ]]; then
-        tail -n 50 "$log_file"
+        tail -n "$lines" "$log_file"
     else
         log_message "No log file found: $log_file"
         exit 1
@@ -303,7 +309,8 @@ main() {
             ;;
         tail)
             load_config
-            tail_logs
+            shift
+            tail_logs "$@"
             ;;
         follow)
             load_config
