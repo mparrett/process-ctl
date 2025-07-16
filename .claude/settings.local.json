@@ -24,7 +24,11 @@
       "Bash(gh run:*)",
       "Bash(git branch:*)",
       "Bash(./process-ctl tail:*)",
-      "Bash(git rebase:*)"
+      "Bash(git rebase:*)",
+      "Bash(git tag:*)",
+      "Bash(./process-ctl --version)",
+      "Bash(just install)",
+      "Bash(process-ctl:*)"
     ],
     "deny": []
   }
