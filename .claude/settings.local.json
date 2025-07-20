@@ -29,7 +29,9 @@
       "Bash(./process-ctl --version)",
       "Bash(just install)",
       "Bash(process-ctl:*)",
-      "Bash(git remote set-url:*)"
+      "Bash(git remote set-url:*)",
+      "Bash(git rm:*)",
+      "Bash(git pull:*)"
     ],
     "deny": []
   }
