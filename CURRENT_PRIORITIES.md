@@ -36,7 +36,7 @@
 ## Active Tasks
 
 ### Current Sprint
-- [ ] Fix `tail` command UX (should show N lines and exit, not follow)
+- [x] ✅ Fix `tail` command UX (now shows N lines and exits, separate `follow` command)
 - [ ] Consider log rotation visibility in status output
 
 ## Next Phase (Future)
