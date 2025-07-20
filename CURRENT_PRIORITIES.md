@@ -1,36 +1,43 @@
 # Current Priorities
 
-## Active Development Tasks
+## Completed Core Features ✅
 
-### 1. Implement Core process-ctl Script
-- [ ] Create main `process-ctl` bash script with argument parsing
-- [ ] Implement configuration discovery (walks up directory tree)
-- [ ] Add basic commands: start, daemon, stop, restart, status, logs, tail
-- [ ] Implement PID file management in `~/.cache/process-ctl/pids/`
-- [ ] Add logging system to `~/.cache/process-ctl/logs/`
+### 1. Core process-ctl Script
+- [x] ✅ Create main `process-ctl` bash script with argument parsing
+- [x] ✅ Implement configuration discovery (walks up directory tree)
+- [x] ✅ Add basic commands: start, start-bg, stop, restart, status, logs, tail, follow
+- [x] ✅ Implement PID file management in `~/.cache/process-ctl/pids/`
+- [x] ✅ Add logging system to `~/.cache/process-ctl/logs/`
 
 ### 2. Process Management Features
-- [ ] Implement port conflict detection
-- [ ] Add graceful shutdown (SIGTERM → SIGKILL)
-- [ ] Handle stale PID file cleanup
-- [ ] Add process monitoring and resource usage display
+- [x] ✅ Implement port conflict detection
+- [x] ✅ Add graceful shutdown (SIGTERM → SIGKILL)
+- [x] ✅ Handle stale PID file cleanup
+- [x] ✅ Add process monitoring and resource usage display
 
 ### 3. Configuration System
-- [ ] Parse `.process-ctl-cfg` files (PROJECT_NAME, START_CMD, PORT, LOG_MAX_SIZE)
-- [ ] Validate required configuration fields
-- [ ] Add configuration examples and templates
+- [x] ✅ Parse `.process-ctl-cfg` files (PROJECT_NAME, START_CMD, PORT, LOG_MAX_SIZE)
+- [x] ✅ Validate required configuration fields
+- [x] ✅ Add configuration examples and templates
 
 ### 4. Testing & Validation
-- [ ] Test all commands with sample configurations
-- [ ] Verify cross-platform compatibility (macOS/Linux)
-- [ ] Test configuration discovery in nested directories
-- [ ] Validate error handling and edge cases
+- [x] ✅ Test all commands with sample configurations (Tank AI, MiniTime, HTTP server)
+- [x] ✅ Verify cross-platform compatibility (macOS/Linux)
+- [x] ✅ Test configuration discovery in nested directories
+- [x] ✅ Validate error handling and edge cases
 
 ### 5. Documentation & Integration
-- [ ] Create example `.process-ctl-cfg` files
-- [ ] Add justfile integration examples
-- [ ] Document installation and setup process
-- [ ] Create troubleshooting guide
+- [x] ✅ Create example `.process-ctl-cfg` files
+- [x] ✅ Add justfile integration examples
+- [x] ✅ Document installation and setup process
+- [x] ✅ Create troubleshooting guide
+- [x] ✅ Add service development guidelines with signal handling
+
+## Active Tasks
+
+### Current Sprint
+- [ ] Fix `tail` command UX (should show N lines and exit, not follow)
+- [ ] Consider log rotation visibility in status output
 
 ## Next Phase (Future)
 - Health checks and HTTP/TCP endpoint monitoring

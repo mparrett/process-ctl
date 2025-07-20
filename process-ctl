@@ -232,6 +232,15 @@ show_status() {
         fi
     else
         echo "Status: NOT RUNNING"
+        
+        # Check if port is in use by another process
+        if [[ -n "$PORT" ]]; then
+            if lsof -i ":$PORT" >/dev/null 2>&1; then
+                echo "⚠️  WARNING: Port $PORT is in use by another process"
+                lsof -i ":$PORT"
+                echo ""
+            fi
+        fi
     fi
     
     echo "PID file: $pid_file"
