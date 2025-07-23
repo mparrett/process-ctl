@@ -42,6 +42,7 @@ process-ctl status     # check status
 process-ctl stop       # stop daemon
 process-ctl logs       # view logs
 process-ctl tail       # follow logs
+process-ctl list       # list all registered projects
 ```
 
 ## Features
@@ -76,6 +77,7 @@ LOG_MAX_SIZE="50M"  # Log rotation threshold
 - `logs` - Show service logs
 - `tail` - Show last 50 lines of logs
 - `follow` - Follow logs in real-time
+- `list` - List all registered projects
 
 Files stored in `~/.cache/process-ctl/`
 
