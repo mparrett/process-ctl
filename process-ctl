@@ -21,6 +21,7 @@ Commands:
     logs       Show service logs
     tail       Show last 50 lines of logs (use -n N for different count)
     follow     Follow logs in real-time
+    list       List all registered projects
     help       Show this help message
 
 Configuration:
@@ -288,6 +289,43 @@ follow_logs() {
     fi
 }
 
+list_projects() {
+    echo "=== Registered Projects ==="
+    echo ""
+    
+    if [[ ! -d "$PID_DIR" ]]; then
+        echo "No projects registered yet."
+        return 0
+    fi
+    
+    local found_projects=false
+    local project_name status pid
+    
+    for pid_file in "$PID_DIR"/*.pid; do
+        # Skip if no .pid files exist (glob doesn't match anything)
+        [[ -f "$pid_file" ]] || continue
+        
+        found_projects=true
+        project_name=$(basename "$pid_file" .pid)
+        
+        if is_process_running "$pid_file"; then
+            pid=$(cat "$pid_file")
+            status="RUNNING (PID: $pid)"
+        else
+            status="STOPPED"
+        fi
+        
+        printf "%-25s %s\n" "$project_name" "$status"
+    done
+    
+    if ! $found_projects; then
+        echo "No projects registered yet."
+    else
+        echo ""
+        echo "Use 'process-ctl status' in a project directory for detailed information."
+    fi
+}
+
 main() {
     ensure_directories
     
@@ -324,6 +362,9 @@ main() {
         follow)
             load_config
             follow_logs
+            ;;
+        list)
+            list_projects
             ;;
         help|--help|-h)
             show_usage
